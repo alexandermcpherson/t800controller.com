@@ -20,7 +20,7 @@ $(function() {
     headUpAndDown -= 5;
     if (headUpAndDown >= HEADYMIN) {
       
-      var command = "S_" + headUpAndDown + "_H";
+      var command = "S_" + headUpAndDown + "_N";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
     }
@@ -32,7 +32,7 @@ $(function() {
     headUpAndDown += 5;
     if (headUpAndDown <= HEADYMAX) {
       
-      var command = "S_" + headUpAndDown + "_H";
+      var command = "S_" + headUpAndDown + "_N";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
     }
