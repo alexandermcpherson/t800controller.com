@@ -27,7 +27,7 @@ $(function() {
   $("#d-left").click( function(e) {
     e.preventDefault();
     logAction("d-left");
-    headLeftAndRight++;
+    headLeftAndRight += 10;
     var command = "s_" + headLeftAndRight + "_H";
 
     if (headLeftAndRight <= HEADXMAX) {
@@ -39,7 +39,7 @@ $(function() {
   $("#d-right").click( function(e) {
     e.preventDefault();
     logAction("d-right");
-    headLeftAndRight--;
+    headLeftAndRight -= 10;
     var command = "s_" + headLeftAndRight + "_H";
 
     if (headLeftAndRight >= HEADXMIN) {
