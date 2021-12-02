@@ -27,11 +27,17 @@ $(function() {
   $("#d-left").click( function(e) {
     e.preventDefault();
     logAction("d-left");
+    headLeftAndRight++;
+    var command = "s_" + headLeftAndRight + "_H";
+
+    sendHeadLeftAndRightCommand(command);
+
   });
 
   $("#d-right").click( function(e) {
     e.preventDefault();
     logAction("d-right");
+    headLeftAndRight--;
   });
 
   // OPAD
@@ -57,6 +63,12 @@ $(function() {
 
   function logAction(action) {
     console.log(action);
+  }
+
+  function sendHeadLeftAndRightCommand(command) {
+    const encoder = new TextEncoder('utf-8');
+    const commandToSend = encoder.encode(command);
+    myCharateristic.writeValueWithoutResponse(commandToSend);
   }
 
 });
