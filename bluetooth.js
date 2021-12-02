@@ -88,6 +88,10 @@ function reconnect() {
   });
 }
 
+$("#plasmaLed1Btn").click( function() {
+	sendLedCommand("plasma_1");
+});
+
 function sendLedCommand(ledCommand) {
 	logCommand(ledCommand);
 	const encoder = new TextEncoder('utf-8');
