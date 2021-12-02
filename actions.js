@@ -167,6 +167,16 @@ $(function() {
         console.log(speechCommand);
     });
 
+    $('#movement-commands').change( function() {
+        movementCommand = $(this).val();
+        
+        // Update movement selection text
+        var text = "You selected: " + $(this).find('option:selected').text();
+        $('#movementCommandSelection').text(text);
+
+        console.log(movementCommand);
+    });
+
     $("#sendSpeechCommandBtn").click( function() {
         sendSpeechCommand();
     });
