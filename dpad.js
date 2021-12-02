@@ -17,8 +17,8 @@ $(function() {
   $("#d-up").click( function(e) {
     e.preventDefault();
     logAction("d-up");
-    headUpAndDown -= 5;
-    if (headUpAndDown >= HEADYMIN) {
+    headUpAndDown += 5;
+    if (headUpAndDown <= HEADYMIN) {
       
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
@@ -29,8 +29,8 @@ $(function() {
   $("#d-down").click( function(e) {
     e.preventDefault();
     logAction("d-down");
-    headUpAndDown += 5;
-    if (headUpAndDown <= HEADYMAX) {
+    headUpAndDown -= 5;
+    if (headUpAndDown >= HEADYMAX) {
       
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
