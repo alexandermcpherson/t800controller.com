@@ -129,6 +129,7 @@
 
 
 		function getSpeechCommand() {
+			console.log("Speech command");
 			const commandSelection = document.getElementById("speech-commands")
 			speechCommand = commandSelection.value
 			document.getElementById("speechCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
@@ -139,7 +140,7 @@
 			movementCommand = commandSelection.value
 			document.getElementById("movementCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
 		}
-		
+
 	});
 
 	</script>
