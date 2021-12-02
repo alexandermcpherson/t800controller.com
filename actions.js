@@ -160,7 +160,6 @@ $("#sendSpeechCommandBtn").click( function() {
 	sendSpeechCommand();
 });
 
-
 // ACTION MOVEMENT
 
 $("#sendActionCommandBtn").click( function() {
