@@ -18,7 +18,7 @@ $(function() {
     e.preventDefault();
     logAction("d-up");
     headUpAndDown += 5;
-    if (headUpAndDown <= HEADYMIN) {
+    if (headUpAndDown <= HEADYMAX) {
       
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
@@ -30,7 +30,7 @@ $(function() {
     e.preventDefault();
     logAction("d-down");
     headUpAndDown -= 5;
-    if (headUpAndDown >= HEADYMAX) {
+    if (headUpAndDown >= HEADYMIN) {
       
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
