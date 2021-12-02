@@ -1,5 +1,7 @@
 $(function() {
 
+  console.log("Dpad loaded?");
+
   // DPAD
   $("#d-up").click( function() {
         logAction("d-up");
