@@ -8,8 +8,8 @@ const EYESMIN = 0;
 const EYESMAX = 180;
 
 var headUpAndDown = 0;
-var headLeftAndRight = 20;
-var eyesLeftAndRight = 0;
+var headLeftAndRight = 90;
+var eyesLeftAndRight = 90;
 
 $(function() {
 
