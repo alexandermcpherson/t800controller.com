@@ -54,5 +54,5 @@ body {
 
 label{
     display: block; /* add this */
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
