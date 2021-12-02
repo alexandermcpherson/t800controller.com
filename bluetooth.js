@@ -88,35 +88,31 @@ function reconnect() {
   });
 }
 
-$("#plasmaLed1Btn").click( function() {
-	sendLedCommand("plasma_1");
-});
-
 function sendLedCommand(ledCommand) {
 	logCommand(ledCommand);
 	const encoder = new TextEncoder('utf-8');
-		const commandToSend = encoder.encode(ledCommand);
+	const commandToSend = encoder.encode(ledCommand);
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
 function sendSoundCommand(soundCommand) {
 	logCommand(soundCommand);
 	const encoder = new TextEncoder('utf-8');
-		const commandToSend = encoder.encode(soundCommand);
+	const commandToSend = encoder.encode(soundCommand);
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
 function sendSpeechCommand() {
 	logCommand(speechCommand);
 	const encoder = new TextEncoder('utf-8');
-		const commandToSend = encoder.encode(speechCommand);
+	const commandToSend = encoder.encode(speechCommand);
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
 function sendMovementCommand() {
 	logCommand(movementCommand);
 	const encoder = new TextEncoder('utf-8');
-		const commandToSend = encoder.encode(movementCommand);
+	const commandToSend = encoder.encode(movementCommand);
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
