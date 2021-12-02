@@ -20,7 +20,7 @@
 				<button id="allRedLedBtn" class="button red_button button_corners wide_button">All Red Off</button><br>
 				<button id="allBlueLedBtn" class="button blue_button button_corners wide_button">All Blue Off</button><br>
 				<button id="eyeLedsBtn" class="button red_button button_corners wide_button">Eyes Off</button><br>
-			<h2>Toggle Plasma</h2>
+			<h2>Fire Plasma</h2>
 				<button id="plasmaLed1Btn" class="button plasma_button button_corners">1</button><button id="plasmaLed2Btn" class="button plasma_button button_corners">2</button><br>
 				<button id="plasmaLed3Btn" class="button plasma_button button_corners">3</button><button id="plasmaLed4Btn" class="button plasma_button button_corners">4</button><br>
 				<button id="plasmaRandomLedBtn" class="button plasma_button button_corners wide_button">Random</button><br>
@@ -107,6 +107,7 @@
 		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<scirpt src="actions.js"></scirpt>
 	<scirpt src="dpad.js"></scirpt>
 	<script>
 
@@ -161,173 +162,7 @@
 			reconnect();
 		});
 
-		// LEDS
-
-		$("#redLed1Btn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("On");
-		    	sendLedCommand("red_led_1_on");
-		    }else {
-		        $me.html("Off");
-		        sendLedCommand("red_led_1_off");
-		    }
-		});
-
-		$("#redLed2Btn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("On");
-		    	sendLedCommand("red_led_2_on");
-		    }else {
-		        $me.html("Off");
-		        sendLedCommand("red_led_2_off");
-		    }
-		});
-
-		$("#blueLed1Btn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("On");
-		    	sendLedCommand("blue_led_1_on");
-		    }else {
-		        $me.html("Off");
-		        sendLedCommand("blue_led_1_off");
-		    }
-		});
-
-		$("#blueLed2Btn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("On");
-		    	sendLedCommand("blue_led_2_on");
-		    }else {
-		        $me.html("Off");
-		        sendLedCommand("blue_led_2_off");
-		    }
-		});
-
-		$("#allBlueLedBtn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("All Blue On");
-		    	$("#blueLed1Btn").html("On");
-		    	$("#blueLed2Btn").html("On");
-		    	sendLedCommand("blue_led_on");
-		    }else {
-		        $me.html("All Blue Off");
-		        $("#blueLed1Btn").html("Off");
-		    	$("#blueLed2Btn").html("Off");
-		        sendLedCommand("blue_led_off");
-		    }
-		});
-
-		$("#allRedLedBtn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("All Red On");
-		    	$("#redLed1Btn").html("On");
-		    	$("#redLed2Btn").html("On");
-		    	sendLedCommand("red_led_on");
-		    }else {
-		        $me.html("All Red Off");
-		        $("#redLed1Btn").html("Off");
-		    	$("#redLed2Btn").html("Off");
-		        sendLedCommand("red_led_off");
-		    }
-		});
-
-		$("#eyeLedsBtn").click( function() {
-		    $me = $(this);
-		    $me.toggleClass('off');
-		    if($me.is(".off")){
-		    	$me.html("Eyes On");
-		    	sendLedCommand("eyes_on");
-		    }else {
-		        $me.html("Eyes Off");
-		        sendLedCommand("eyes_off");
-		    }
-		});
-
-		$("#plasmaLed1Btn").click( function() {
-			sendLedCommand("plasma_1");
-		});
-
-		$("#plasmaLed2Btn").click( function() {
-			sendLedCommand("plasma_2");
-		});
-
-		$("#plasmaLed3Btn").click( function() {
-			sendLedCommand("plasma_3");
-		});
-
-		$("#plasmaLed4Btn").click( function() {
-			sendLedCommand("plasma_4");
-		});
-
-		$("#plasmaRandomLedBtn").click( function() {
-			sendLedCommand("plasma_random");
-		});
-
-		// SOUNDS
-
-		document.getElementById("t1Btn").addEventListener('click', function() {
-			sendSoundCommand("t1");
-		});
-
-		document.getElementById("t2Btn").addEventListener('click', function() {
-			sendSoundCommand("t2");
-		});
-
-		document.getElementById("t3Btn").addEventListener('click', function() {
-			sendSoundCommand("t3");
-		});
-
-		document.getElementById("t4Btn").addEventListener('click', function() {
-			sendSoundCommand("t4");
-		});
-
-		document.getElementById("t5Btn").addEventListener('click', function() {
-			sendSoundCommand("t5");
-		});
-
-		document.getElementById("t6Btn").addEventListener('click', function() {
-			sendSoundCommand("t6");
-		});
-
-		document.getElementById("custom1Btn").addEventListener('click', function() {
-			sendSoundCommand("custom1");
-		});
-
-		document.getElementById("custom2Btn").addEventListener('click', function() {
-			sendSoundCommand("custom2");
-		});
-
-		document.getElementById("custom3Btn").addEventListener('click', function() {
-			sendSoundCommand("custom3");
-		});
-
-		document.getElementById("custom4Btn").addEventListener('click', function() {
-			sendSoundCommand("custom4");
-		});
-
-		// ACTION SPEECH
-
-		document.getElementById("sendSpeechCommandBtn").addEventListener('click', function() {
-			sendSpeechCommand();
-		});
-
-		// ACTION MOVEMENT
-
-		document.getElementById("sendActionCommandBtn").addEventListener('click', function() {
-			sendMovementCommand();
-		});
+		
 
 		function connect() {
 		  console.log('Connecting to Bluetooth Device...');
