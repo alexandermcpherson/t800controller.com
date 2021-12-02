@@ -17,11 +17,25 @@ $(function() {
   $("#d-up").click( function(e) {
     e.preventDefault();
     logAction("d-up");
+    headUpAndDown -= 5;
+    if (headUpAndDown >= HEADYMIN) {
+      
+      var command = "S_" + headUpAndDown + "_H";
+      console.log(command);
+      sendHeadLeftAndRightCommand(command);
+    }
   });
 
   $("#d-down").click( function(e) {
     e.preventDefault();
     logAction("d-down");
+    headUpAndDown += 5;
+    if (headUpAndDown <= HEADYMAX) {
+      
+      var command = "S_" + headUpAndDown + "_H";
+      console.log(command);
+      sendHeadLeftAndRightCommand(command);
+    }
   });
 
   $("#d-left").click( function(e) {
