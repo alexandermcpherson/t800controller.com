@@ -117,7 +117,7 @@ function sendMovementCommand() {
 }
 
 function logCommand(command) {
-	console.log('Seinding command: ' + command);
+	console.log('Sending command: ' + command);
 }	
 
 function logError(error) {
@@ -126,12 +126,12 @@ function logError(error) {
 
 function getSpeechCommand() {
 	const commandSelection = document.getElementById("speech-commands")
-  	command = commandSelection.value
-  	document.getElementById("speechCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
+	command = commandSelection.value
+	document.getElementById("speechCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
 }
 
 function getMovementCommand() {
 	const commandSelection = document.getElementById("movement-commands")
-  	command = commandSelection.value
-  	document.getElementById("movementCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
+	command = commandSelection.value
+	document.getElementById("movementCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
 }
