@@ -28,7 +28,7 @@ $(function() {
     e.preventDefault();
     logAction("d-left");
     headLeftAndRight += 10;
-    var command = "s_" + headLeftAndRight + "_H";
+    var command = "S_" + headLeftAndRight + "_H";
 
     console.log(command);
 
@@ -42,7 +42,7 @@ $(function() {
     e.preventDefault();
     logAction("d-right");
     headLeftAndRight -= 10;
-    var command = "s_" + headLeftAndRight + "_H";
+    var command = "S_" + headLeftAndRight + "_H";
 
     console.log(command);
 
