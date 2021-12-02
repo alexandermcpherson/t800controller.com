@@ -159,7 +159,9 @@ $(function() {
 
     $('#speech-commands').change( function() {
         speechCommand = $(this).val();
-        var text = $(this).find('option:selected').text();
+        
+        // Update speech selection text
+        var text = "You selected: " + $(this).find('option:selected').text();
         $('#speechCommandSelection').text(text);
 
         console.log(speechCommand);
