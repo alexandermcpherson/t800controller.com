@@ -124,4 +124,19 @@
 	<script src="bluetooth.js"></script>
 	<script src="actions.js"></script>
 	<scirpt src="dpad.js"></scirpt>
+	<script type="text/javascript">
+		
+	$(function() {
+
+		  $("#test").click( function() {
+		        logAction("test");
+		  });
+
+		  function logAction(action) {
+		    console.log(action);
+		  }
+
+	});
+
+	</script>
 </html>
