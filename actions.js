@@ -157,6 +157,10 @@ $(function() {
 
     // ACTION SPEECH
 
+    $('#speech-commands').change( function() {
+        speechCommand = $(this).val();
+    });
+
     $("#sendSpeechCommandBtn").click( function() {
         sendSpeechCommand();
     });
