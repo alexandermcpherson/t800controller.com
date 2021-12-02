@@ -30,6 +30,8 @@ $(function() {
     headLeftAndRight += 10;
     var command = "s_" + headLeftAndRight + "_H";
 
+    console.log(command);
+
     if (headLeftAndRight <= HEADXMAX) {
       sendHeadLeftAndRightCommand(command);
     }
@@ -41,6 +43,8 @@ $(function() {
     logAction("d-right");
     headLeftAndRight -= 10;
     var command = "s_" + headLeftAndRight + "_H";
+
+    console.log(command);
 
     if (headLeftAndRight >= HEADXMIN) {
       sendHeadLeftAndRightCommand(command);
