@@ -1,39 +1,45 @@
 $(function() {
 
-  console.log("Dpad loaded?");
-
   // DPAD
-  $("#d-up").click( function() {
-        logAction("d-up");
+  $("#d-up").click( function(e) {
+    e.preventDefault();
+    logAction("d-up");
   });
 
-  $("#d-down").click( function() {
-        logAction("d-down");
+  $("#d-down").click( function(e) {
+    e.preventDefault();
+    logAction("d-down");
   });
 
-  $("#d-left").click( function() {
-        logAction("d-left");
+  $("#d-left").click( function(e) {
+    e.preventDefault();
+    logAction("d-left");
   });
 
-  $("#d-right").click( function() {
-        logAction("d-right");
+  $("#d-right").click( function(e) {
+    e.preventDefault();
+    logAction("d-right");
   });
 
   // OPAD
-  $("#o-up").click( function() {
-        logAction("o-up");
+  $("#o-up").click( function(e) {
+    e.preventDefault();
+    logAction("o-up");
   });
 
-  $("#o-down").click( function() {
-        logAction("o-down");
+  $("#o-down").click( function(e) {
+    e.preventDefault();
+    logAction("o-down");
   });
 
-  $("#o-left").click( function() {
-        logAction("o-left");
+  $("#o-left").click( function(e) {
+    e.preventDefault();
+    logAction("o-left");
   });
 
-  $("#o-right").click( function() {
-        logAction("o-right");
+  $("#o-right").click( function(e) {
+    e.preventDefault();
+    logAction("o-right");
   });
 
   function logAction(action) {

@@ -106,18 +106,17 @@
 			<div class="set dark">
 			  <nav class="d-pad">
 			    <a class="up" id="d-up" href="#"></a>
-			    <a class="right" id="d-right" onclick="return false;"></a>
-			    <a class="down" id="d-down" onclick="return false;"></a>
-			    <a class="left" id="d-left" onclick="return false;"></a>  
+			    <a class="right" id="d-right" href="#"></a>
+			    <a class="down" id="d-down" href="#"></a>
+			    <a class="left" id="d-left" href="#"></a>  
 			  </nav>
 			  <nav class="o-pad">
-			    <a class="up" id="o-up"></a>
-			    <a class="right" id="o-right"></a>
-			    <a class="down" id="o-down"></a>
-			    <a class="left" id="o-left"></a>  
+			    <a class="up" id="o-up" href="#"></a>
+			    <a class="right" id="o-right" href="#"></a>
+			    <a class="down" id="o-down" href="#"></a>
+			    <a class="left" id="o-left" href="#"></a>  
 			  </nav>
 			</div>
-			<a id="test" href="#">Test</a>
 		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -126,18 +125,18 @@
 	<scirpt src="dpad.js"></scirpt>
 	<script type="text/javascript">
 		
-	$(function() {
+	// $(function() {
 
-		  $("#d-up").click( function(e) {
-		  	e.preventDefault();
-		        logAction("d-up");
-		  });
+	// 	  $("#d-up").click( function(e) {
+	// 	  	e.preventDefault();
+	// 	        logAction("d-up");
+	// 	  });
 
-		  function logAction(action) {
-		    console.log(action);
-		  }
+	// 	  function logAction(action) {
+	// 	    console.log(action);
+	// 	  }
 
-	});
+	// });
 
 	</script>
 </html>
