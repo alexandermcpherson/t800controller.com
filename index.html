@@ -128,7 +128,8 @@
 		
 	$(function() {
 
-		  $("#test").click( function() {
+		  $("#test").click( function(e) {
+		  	e.preventDefault();
 		        logAction("test");
 		  });
 
