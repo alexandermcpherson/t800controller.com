@@ -29,7 +29,7 @@ $(function() {
     logAction("d-left");
 
     if (headLeftAndRight >= HEADXMIN) {
-      headLeftAndRight -= 10;
+      headLeftAndRight --;
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
@@ -42,7 +42,7 @@ $(function() {
     logAction("d-right");
 
     if (headLeftAndRight <= HEADXMAX) {
-      headLeftAndRight += 10;
+      headLeftAndRight ++;
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
