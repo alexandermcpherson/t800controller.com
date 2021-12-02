@@ -27,12 +27,12 @@ $(function() {
   $("#d-left").click( function(e) {
     e.preventDefault();
     logAction("d-left");
-    headLeftAndRight += 10;
+    headLeftAndRight -= 10;
     var command = "S_" + headLeftAndRight + "_H";
 
     console.log(command);
 
-    if (headLeftAndRight <= HEADXMAX) {
+    if (headLeftAndRight >= HEADXMIN) {
       sendHeadLeftAndRightCommand(command);
     }
 
@@ -41,12 +41,12 @@ $(function() {
   $("#d-right").click( function(e) {
     e.preventDefault();
     logAction("d-right");
-    headLeftAndRight -= 10;
+    headLeftAndRight += 10;
     var command = "S_" + headLeftAndRight + "_H";
 
     console.log(command);
 
-    if (headLeftAndRight >= HEADXMIN) {
+    if (headLeftAndRight <= HEADXMAX) {
       sendHeadLeftAndRightCommand(command);
     }
   });
