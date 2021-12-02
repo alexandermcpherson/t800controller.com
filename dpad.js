@@ -34,7 +34,7 @@ $(function() {
         logAction("o-right");
   });
 
-  fucntion logAction(action) {
+  function logAction(action) {
     console.log(action)
   }
 
