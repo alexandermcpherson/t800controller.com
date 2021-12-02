@@ -29,7 +29,10 @@ $(function() {
     logAction("d-left");
     headLeftAndRight++;
     var command = "s_" + headLeftAndRight + "_H";
-    sendHeadLeftAndRightCommand(command);
+
+    if (headLeftAndRight <= HEADXMAX) {
+      sendHeadLeftAndRightCommand(command);
+    }
 
   });
 
@@ -38,7 +41,10 @@ $(function() {
     logAction("d-right");
     headLeftAndRight--;
     var command = "s_" + headLeftAndRight + "_H";
-    sendHeadLeftAndRightCommand(command);
+
+    if (headLeftAndRight >= HEADXMIN) {
+      sendHeadLeftAndRightCommand(command);
+    }
   });
 
   // OPAD
