@@ -29,7 +29,6 @@ $(function() {
     logAction("d-left");
     headLeftAndRight++;
     var command = "s_" + headLeftAndRight + "_H";
-
     sendHeadLeftAndRightCommand(command);
 
   });
@@ -38,6 +37,8 @@ $(function() {
     e.preventDefault();
     logAction("d-right");
     headLeftAndRight--;
+    var command = "s_" + headLeftAndRight + "_H";
+    sendHeadLeftAndRightCommand(command);
   });
 
   // OPAD
