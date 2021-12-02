@@ -27,9 +27,9 @@ $(function() {
   $("#d-left").click( function(e) {
     e.preventDefault();
     logAction("d-left");
-
+    headLeftAndRight -= 5;
     if (headLeftAndRight >= HEADXMIN) {
-      headLeftAndRight --;
+      
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
@@ -40,9 +40,9 @@ $(function() {
   $("#d-right").click( function(e) {
     e.preventDefault();
     logAction("d-right");
-
+    headLeftAndRight += 5;
     if (headLeftAndRight <= HEADXMAX) {
-      headLeftAndRight ++;
+      
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
