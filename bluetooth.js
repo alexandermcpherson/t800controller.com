@@ -102,14 +102,14 @@ function sendSoundCommand(soundCommand) {
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
-function sendSpeechCommand(speechCommand) {
+function sendSpeechCommand() {
 	logCommand(speechCommand);
 	const encoder = new TextEncoder('utf-8');
 	const commandToSend = encoder.encode(speechCommand);
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
-function sendMovementCommand(movementCommand) {
+function sendMovementCommand() {
 	logCommand(movementCommand);
 	const encoder = new TextEncoder('utf-8');
 	const commandToSend = encoder.encode(movementCommand);
