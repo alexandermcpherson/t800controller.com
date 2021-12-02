@@ -1,3 +1,16 @@
+const HEADYMAX = 70;
+const HEADYMIN = 0;
+
+const HEADXMIN = 20;
+const HEADXMAX = 160;
+
+const EYESMIN = 0;
+const EYESMAX = 180;
+
+var headUpAndDown = 0;
+var headLeftAndRight = 20;
+var eyesLeftAndRight = 0;
+
 $(function() {
 
   // DPAD
