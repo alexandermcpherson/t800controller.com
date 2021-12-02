@@ -125,7 +125,22 @@
 	<script src="dpad.js"></script>
 	<script type="text/javascript">
 		
-	$(function() {});
+	$(function() {
+
+
+		function getSpeechCommand() {
+			const commandSelection = document.getElementById("speech-commands")
+			speechCommand = commandSelection.value
+			document.getElementById("speechCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
+		}
+
+		function getMovementCommand() {
+			const commandSelection = document.getElementById("movement-commands")
+			movementCommand = commandSelection.value
+			document.getElementById("movementCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
+		}
+		
+	});
 
 	</script>
 </html>

@@ -123,15 +123,3 @@ function logCommand(command) {
 function logError(error) {
 	console.log('Error: ' + error);
 }
-
-function getSpeechCommand() {
-	const commandSelection = document.getElementById("speech-commands")
-	speechCommand = commandSelection.value
-	document.getElementById("speechCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
-}
-
-function getMovementCommand() {
-	const commandSelection = document.getElementById("movement-commands")
-	movementCommand = commandSelection.value
-	document.getElementById("movementCommandSelection").innerHTML = "You selected: " + commandSelection.options[commandSelection.selectedIndex].text;
-}
