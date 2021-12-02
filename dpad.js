@@ -35,7 +35,7 @@ $(function() {
   });
 
   function logAction(action) {
-    console.log(action)
+    console.log(action);
   }
 
 });
