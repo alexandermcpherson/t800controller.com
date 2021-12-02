@@ -159,6 +159,7 @@ $(function() {
 
     $('#speech-commands').change( function() {
         speechCommand = $(this).val();
+        consolo.log(speechCommand);
     });
 
     $("#sendSpeechCommandBtn").click( function() {
