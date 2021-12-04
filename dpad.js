@@ -81,17 +81,17 @@ $(function() {
     }
   });
 
-  // $("#o-down").click( function(e) {
-  //   e.preventDefault();
-  //   logAction("o-down");
+  $("#o-down").click( function(e) {
+    e.preventDefault();
+    logAction("o-down");
 
-  //   if (jawUpAndDown > JAWMIN) {
-  //     jawUpAndDown -= 1;
-  //     var command = "S_" + jawUpAndDown + "_J";
-  //     console.log(command);
-  //     sendCommand(command);
-  //   }
-  // });
+    if (jawUpAndDown > JAWMIN) {
+      jawUpAndDown -= 1;
+      var command = "S_" + jawUpAndDown + "_J";
+      console.log(command);
+      sendCommand(command);
+    }
+  });
 
   // $("#o-left").click( function(e) {
   //   e.preventDefault();
