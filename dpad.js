@@ -98,24 +98,26 @@ $(function() {
     logAction("o-left");
 
     if (eyesLeftAndRight < EYESMAX) {
-      eyesLeftAndRight -= 1;
-      var command = "S_" + headLeftAndRight + "_E";
+      eyesLeftAndRight -=1;
+      var command = "S_" + jawUpAndDown + "_E";
       console.log(command);
       sendCommand(command);
     }
+
+
   });
 
-  $("#o-right").click( function(e) {
-    e.preventDefault();
-    logAction("o-right");
+  // $("#o-right").click( function(e) {
+  //   e.preventDefault();
+  //   logAction("o-right");
 
-    if (eyesLeftAndRight > EYESMIN) {
-      eyesLeftAndRight += 1;
-      var command = "S_" + headLeftAndRight + "_E";
-      console.log(command);
-      sendCommand(command);
-    }
-  });
+  //   if (eyesLeftAndRight > EYESMIN) {
+  //     eyesLeftAndRight += 1;
+  //     var command = "S_" + headLeftAndRight + "_E";
+  //     console.log(command);
+  //     sendCommand(command);
+  //   }
+  // });
 
   function logAction(action) {
     console.log(action);
