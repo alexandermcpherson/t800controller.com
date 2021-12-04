@@ -55,3 +55,7 @@ label{
     display: block; /* add this */
     padding-bottom: 0px;
 }
+
+p {
+  font-size: 10px;
+}
