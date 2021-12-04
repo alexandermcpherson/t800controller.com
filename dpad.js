@@ -4,8 +4,8 @@ const HEADYMAX = 70;
 const HEADXMIN = 20;
 const HEADXMAX = 160;
 
-const EYESMIN = 0;
-const EYESMAX = 180;
+const EYESMIN = 20;
+const EYESMAX = 160;
 
 const JAWMIN = 0;
 const JAWMAX = 40;
@@ -97,8 +97,8 @@ $(function() {
     e.preventDefault();
     logAction("o-left");
 
-    if (eyesLeftAndRight < EYESMAX && eyesLeftAndRight >= EYESMIN) {
-      eyesLeftAndRight -=1;
+    if (eyesLeftAndRight > EYESMIN) {
+      eyesLeftAndRight -= 1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
       sendCommand(command);
@@ -109,7 +109,7 @@ $(function() {
     e.preventDefault();
     logAction("o-right");
 
-    if (eyesLeftAndRight > EYESMIN && eyesLeftAndRight <= EYESMAX) {
+    if (eyesLeftAndRight < EYESMAX) {
       eyesLeftAndRight += 1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
