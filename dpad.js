@@ -13,7 +13,7 @@ const JAWMAX = 0;
 var headUpAndDown = 0;
 var headLeftAndRight = 90;
 var eyesLeftAndRight = 90;
-var jawUpAndDown = 40;
+var jawUpAndDown = 0;
 
 $(function() {
 
@@ -81,41 +81,41 @@ $(function() {
     }
   });
 
-  $("#o-down").click( function(e) {
-    e.preventDefault();
-    logAction("o-down");
+  // $("#o-down").click( function(e) {
+  //   e.preventDefault();
+  //   logAction("o-down");
 
-    if (jawUpAndDown > JAWMIN) {
-      jawUpAndDown -= 1;
-      var command = "S_" + jawUpAndDown + "_J";
-      console.log(command);
-      sendCommand(command);
-    }
-  });
+  //   if (jawUpAndDown > JAWMIN) {
+  //     jawUpAndDown -= 1;
+  //     var command = "S_" + jawUpAndDown + "_J";
+  //     console.log(command);
+  //     sendCommand(command);
+  //   }
+  // });
 
-  $("#o-left").click( function(e) {
-    e.preventDefault();
-    logAction("o-left");
+  // $("#o-left").click( function(e) {
+  //   e.preventDefault();
+  //   logAction("o-left");
 
-    if (eyesLeftAndRight > EYESMIN) {
-      eyesLeftAndRight -= 1;
-      var command = "S_" + headLeftAndRight + "_E";
-      console.log(command);
-      sendCommand(command);
-    }
-  });
+  //   if (eyesLeftAndRight > EYESMIN) {
+  //     eyesLeftAndRight -= 1;
+  //     var command = "S_" + headLeftAndRight + "_E";
+  //     console.log(command);
+  //     sendCommand(command);
+  //   }
+  // });
 
-  $("#o-right").click( function(e) {
-    e.preventDefault();
-    logAction("o-right");
+  // $("#o-right").click( function(e) {
+  //   e.preventDefault();
+  //   logAction("o-right");
 
-    if (eyesLeftAndRight < EYESMAX) {
-      eyesLeftAndRight += 1;
-      var command = "S_" + headLeftAndRight + "_E";
-      console.log(command);
-      sendCommand(command);
-    }
-  });
+  //   if (eyesLeftAndRight < EYESMAX) {
+  //     eyesLeftAndRight += 1;
+  //     var command = "S_" + headLeftAndRight + "_E";
+  //     console.log(command);
+  //     sendCommand(command);
+  //   }
+  // });
 
   function logAction(action) {
     console.log(action);
