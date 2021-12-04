@@ -17,9 +17,9 @@ $(function() {
   $("#d-up").click( function(e) {
     e.preventDefault();
     logAction("d-up");
-    headUpAndDown += 5;
-    if (headUpAndDown <= HEADYMAX) {
-      
+    if (headUpAndDown < HEADYMAX) {
+
+      headUpAndDown += 5;
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
@@ -29,9 +29,10 @@ $(function() {
   $("#d-down").click( function(e) {
     e.preventDefault();
     logAction("d-down");
-    headUpAndDown -= 5;
-    if (headUpAndDown >= HEADYMIN) {
-      
+    
+    if (headUpAndDown > HEADYMIN) {
+
+      headUpAndDown -= 5;
       var command = "S_" + headUpAndDown + "_N";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
@@ -41,9 +42,9 @@ $(function() {
   $("#d-left").click( function(e) {
     e.preventDefault();
     logAction("d-left");
-    headLeftAndRight -= 5;
-    if (headLeftAndRight >= HEADXMIN) {
-      
+    
+    if (headLeftAndRight > HEADXMIN) {
+      headLeftAndRight -= 5;
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
@@ -54,9 +55,9 @@ $(function() {
   $("#d-right").click( function(e) {
     e.preventDefault();
     logAction("d-right");
-    headLeftAndRight += 5;
-    if (headLeftAndRight <= HEADXMAX) {
-      
+    
+    if (headLeftAndRight < HEADXMAX) {
+      headLeftAndRight += 5;
       var command = "S_" + headLeftAndRight + "_H";
       console.log(command);
       sendHeadLeftAndRightCommand(command);
