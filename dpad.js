@@ -71,7 +71,7 @@ $(function() {
   // OPAD
   $("#o-up").click( function(e) {
     e.preventDefault();
-    logAction("0-up");
+    logAction("o-up");
 
     if (jawUpAndDown < JAWMAX) {
       jawUpAndDown += 1;
@@ -87,7 +87,7 @@ $(function() {
 
     if (jawUpAndDown > JAWMIN) {
       jawUpAndDown -= 1;
-      var command = "S_" + headUpAndDown + "_J";
+      var command = "S_" + jawUpAndDown + "_J";
       console.log(command);
       sendCommand(command);
     }
