@@ -99,7 +99,7 @@ $(function() {
 
     if (eyesLeftAndRight < EYESMAX) {
       eyesLeftAndRight -=1;
-      var command = "S_" + jawUpAndDown + "_E";
+      var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
       sendCommand(command);
     }
@@ -107,17 +107,17 @@ $(function() {
 
   });
 
-  // $("#o-right").click( function(e) {
-  //   e.preventDefault();
-  //   logAction("o-right");
+  $("#o-right").click( function(e) {
+    e.preventDefault();
+    logAction("o-right");
 
-  //   if (eyesLeftAndRight > EYESMIN) {
-  //     eyesLeftAndRight += 1;
-  //     var command = "S_" + headLeftAndRight + "_E";
-  //     console.log(command);
-  //     sendCommand(command);
-  //   }
-  // });
+    if (eyesLeftAndRight > EYESMIN) {
+      eyesLeftAndRight += 1;
+      var command = "S_" + eyesLeftAndRight + "_E";
+      console.log(command);
+      sendCommand(command);
+    }
+  });
 
   function logAction(action) {
     console.log(action);
