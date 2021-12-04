@@ -97,7 +97,7 @@ $(function() {
     e.preventDefault();
     logAction("o-left");
 
-    if (eyesLeftAndRight < EYESMAX && eyesLeftAndRight != 0) {
+    if (eyesLeftAndRight < EYESMAX && eyesLeftAndRight >= EYESMIN) {
       eyesLeftAndRight -=1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
@@ -109,7 +109,7 @@ $(function() {
     e.preventDefault();
     logAction("o-right");
 
-    if (eyesLeftAndRight > EYESMIN) {
+    if (eyesLeftAndRight > EYESMIN && eyesLeftAndRight <= EYESMAX) {
       eyesLeftAndRight += 1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
