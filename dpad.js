@@ -93,29 +93,29 @@ $(function() {
     }
   });
 
-  // $("#o-left").click( function(e) {
-  //   e.preventDefault();
-  //   logAction("o-left");
+  $("#o-left").click( function(e) {
+    e.preventDefault();
+    logAction("o-left");
 
-  //   if (eyesLeftAndRight > EYESMIN) {
-  //     eyesLeftAndRight -= 1;
-  //     var command = "S_" + headLeftAndRight + "_E";
-  //     console.log(command);
-  //     sendCommand(command);
-  //   }
-  // });
+    if (eyesLeftAndRight > EYESMIN) {
+      eyesLeftAndRight -= 1;
+      var command = "S_" + headLeftAndRight + "_E";
+      console.log(command);
+      sendCommand(command);
+    }
+  });
 
-  // $("#o-right").click( function(e) {
-  //   e.preventDefault();
-  //   logAction("o-right");
+  $("#o-right").click( function(e) {
+    e.preventDefault();
+    logAction("o-right");
 
-  //   if (eyesLeftAndRight < EYESMAX) {
-  //     eyesLeftAndRight += 1;
-  //     var command = "S_" + headLeftAndRight + "_E";
-  //     console.log(command);
-  //     sendCommand(command);
-  //   }
-  // });
+    if (eyesLeftAndRight < EYESMAX) {
+      eyesLeftAndRight += 1;
+      var command = "S_" + headLeftAndRight + "_E";
+      console.log(command);
+      sendCommand(command);
+    }
+  });
 
   function logAction(action) {
     console.log(action);
