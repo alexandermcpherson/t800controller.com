@@ -97,28 +97,28 @@ $(function() {
     e.preventDefault();
     logAction("o-left");
 
-    
-    if (eyesLeftAndRight > EYESMIN) {
-      eyesLeftAndRight += 1;
+    var unsigned = eyesLeftAndRight >>>0
+
+    if (unsigned < EYESMAX) {
+      eyesLeftAndRight -=1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
       sendCommand(command);
     }
-
   });
 
   $("#o-right").click( function(e) {
     e.preventDefault();
     logAction("o-right");
 
-    if (eyesLeftAndRight < EYESMAX) {
-      eyesLeftAndRight -=1;
+    var unsigned = eyesLeftAndRight >>>0
+
+    if (unsigned > EYESMIN) {
+      eyesLeftAndRight += 1;
       var command = "S_" + eyesLeftAndRight + "_E";
       console.log(command);
       sendCommand(command);
     }
-
-    
   });
 
   function logAction(action) {
