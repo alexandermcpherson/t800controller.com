@@ -13,7 +13,7 @@ const JAWMAX = 0;
 var headUpAndDown = 0;
 var headLeftAndRight = 90;
 var eyesLeftAndRight = 90;
-var jawUpAndDown = 0;
+var jawUpAndDown = 40;
 
 $(function() {
 
