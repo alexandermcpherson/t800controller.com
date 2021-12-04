@@ -121,7 +121,7 @@ $(function() {
     console.log(action);
   }
 
-  function sendHCommand(command) {
+  function sendCommand(command) {
     const encoder = new TextEncoder('utf-8');
     const commandToSend = encoder.encode(command);
     myCharateristic.writeValueWithoutResponse(commandToSend);
