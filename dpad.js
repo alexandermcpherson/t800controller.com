@@ -7,8 +7,8 @@ const HEADXMAX = 160;
 const EYESMIN = 0;
 const EYESMAX = 180;
 
-const JAWMIN = 0;
-const JAWMAX = 40;
+const JAWMIN = 40;
+const JAWMAX = 0;
 
 var headUpAndDown = 0;
 var headLeftAndRight = 90;
