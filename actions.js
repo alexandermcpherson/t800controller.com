@@ -30,10 +30,10 @@ $(function() {
         $me.toggleClass('off');
         if($me.is(".off")){
             $me.html("On");
-            sendLedCommand("blue_led_tl_on");
+            sendLedCommand("blue_led_1_on");
         }else {
             $me.html("Off");
-            sendLedCommand("blue_led_tl_off");
+            sendLedCommand("blue_led_1_off");
         }
     });
 
@@ -42,10 +42,10 @@ $(function() {
         $me.toggleClass('off');
         if($me.is(".off")){
             $me.html("On");
-            sendLedCommand("blue_led_tr_on");
+            sendLedCommand("blue_led_2_on");
         }else {
             $me.html("Off");
-            sendLedCommand("blue_led_tr_off");
+            sendLedCommand("blue_led_2_off");
         }
     });
 
