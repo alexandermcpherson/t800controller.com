@@ -140,19 +140,19 @@ $(function() {
     });
 
     $("#custom1Btn").click( function() {
-        sendSoundCommand("custom_1");
+        sendSoundCommand("c1");
     });
 
     $("#custom2Btn").click( function() {
-        sendSoundCommand("custo_2");
+        sendSoundCommand("c2");
     });
 
     $("#custom3Btn").click( function() {
-        sendSoundCommand("custom_3");
+        sendSoundCommand("c3");
     });
 
     $("#custom4Btn").click( function() {
-        sendSoundCommand("custom_4");
+        sendSoundCommand("c4");
     });
 
     // ACTION SPEECH
