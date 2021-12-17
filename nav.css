@@ -7,8 +7,12 @@ ul.topnav {
 }
 
 ul.topnav li {
-  float: left;
+  float: right;
   font-size: 12px;
+}
+
+ul.topnav.contoller {
+  float: left;
 }
 
 ul.topnav li a {
