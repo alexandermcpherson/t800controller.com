@@ -7,7 +7,7 @@ ul.topnav {
 }
 
 ul.topnav li {
-  float: right;
+  float: left;
   font-size: 12px;
 }
 
