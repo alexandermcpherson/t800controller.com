@@ -14,7 +14,7 @@ ul.topnav li {
   float: left;
 }
 
-.topnav-right {
+.topnav-right li a {
   float: right;
 }
 
