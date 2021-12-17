@@ -11,7 +11,7 @@ ul.topnav li {
   font-size: 12px;
 }
 
-ul.topnav.contoller {
+.topnav-left {
   float: left;
 }
 
