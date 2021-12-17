@@ -1,8 +1,3 @@
-.topnav{
-    margin: 0 auto;
-    text-align: center;
-}
-
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -12,7 +7,7 @@ ul.topnav {
 }
 
 ul.topnav li {
-  float: none;
+  float: right;
 }
 
 ul.topnav li a {
