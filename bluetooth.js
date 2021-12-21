@@ -64,8 +64,6 @@ function setState() {
 			$("#disconnectBluetoothBtn").attr('disabled', false);
 			$("#disconnectBluetoothBtn").removeClass("disable-inputs");
 			$("#reconnectBluetoothBtn").attr('disabled', true);
-			$(".d-pad").removeAttr("disabled");
-			$(".o-pad").removeAttr("disabled");
 		} else {
 			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
 			$("#inputs").removeClass("enable-inputs");
@@ -75,8 +73,6 @@ function setState() {
 			$("#disconnectBluetoothBtn").attr('disabled', true);
 			$("#disconnectBluetoothBtn").addClass("disable-inputs");
 			$("#reconnectBluetoothBtn").attr('disabled', false);
-			$(".d-pad").attr("disabled", "disabled");
-			$(".o-pad").attr("disabled", "disabled");
 		}
 }
 
