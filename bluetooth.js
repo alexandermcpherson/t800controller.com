@@ -99,6 +99,7 @@ function disconnect() {
 function onDisconnected(event) {
   // Object event.target is Bluetooth Device getting disconnected.
   connected = false;
+  setState();
   console.log('> Bluetooth Device disconnected');
 }
 
