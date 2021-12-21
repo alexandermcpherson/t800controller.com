@@ -11,24 +11,7 @@ var bluetoothDevice;
 var connected = false;
 
 $(function() {
-		if (connected) {
-			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
-			$("#inputs").addClass("enable-inputs");
-			$("#discoverBluetoothBtn").attr('disabled', true);
-			$("#discoverBluetoothBtn").addClass("disable-inputs");
-			$("#disconnectBluetoothBtn").attr('disabled', false);
-			$("#disconnectBluetoothBtn").removeClass("disable-inputs");
-			$("#reconnectBluetoothBtn").attr('disabled', true);
-		} else {
-			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
-			$("#inputs").removeClass("enable-inputs");
-			$("#inputs").addClass("disable-inputs");
-			$("#discoverBluetoothBtn").attr('disabled', false);
-			$("#discoverBluetoothBtn").removeClass("disable-inputs");
-			$("#disconnectBluetoothBtn").attr('disabled', true);
-			$("#disconnectBluetoothBtn").addClass("disable-inputs");
-			$("#reconnectBluetoothBtn").attr('disabled', false);
-		}
+	setState();
 });
 
 document.getElementById("discoverBluetoothBtn").addEventListener('click', function() {
@@ -45,6 +28,7 @@ document.getElementById("discoverBluetoothBtn").addEventListener('click', functi
 	    bluetoothDevice.addEventListener('gattserverdisconnected', onDisconnected);
 	    // Attempts to connect to remote GATT Server.
 	    connected = true;
+	    setState();
 			return device.gatt.connect();
   	})
   	.then(server => {
@@ -70,6 +54,27 @@ document.getElementById("disconnectBluetoothBtn").addEventListener('click', func
 document.getElementById("reconnectBluetoothBtn").addEventListener('click', function() {
 	reconnect();
 });
+
+function setState() {
+	if (connected) {
+			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
+			$("#inputs").addClass("enable-inputs");
+			$("#discoverBluetoothBtn").attr('disabled', true);
+			$("#discoverBluetoothBtn").addClass("disable-inputs");
+			$("#disconnectBluetoothBtn").attr('disabled', false);
+			$("#disconnectBluetoothBtn").removeClass("disable-inputs");
+			$("#reconnectBluetoothBtn").attr('disabled', true);
+		} else {
+			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
+			$("#inputs").removeClass("enable-inputs");
+			$("#inputs").addClass("disable-inputs");
+			$("#discoverBluetoothBtn").attr('disabled', false);
+			$("#discoverBluetoothBtn").removeClass("disable-inputs");
+			$("#disconnectBluetoothBtn").attr('disabled', true);
+			$("#disconnectBluetoothBtn").addClass("disable-inputs");
+			$("#reconnectBluetoothBtn").attr('disabled', false);
+		}
+}
 
 function connect() {
   console.log('Connecting to Bluetooth Device...');
