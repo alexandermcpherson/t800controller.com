@@ -16,7 +16,6 @@ $(function() {
 			$("#inputs").addClass("enable-inputs");
 			$("#disconnectBluetoothBtn").attr('disabled' , false);
 			$("#reconnectBluetoothBtn").attr('disabled' , true;
-		}
 		} else {
 			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
 			$("#inputs").removeClass("enable-inputs");
