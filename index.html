@@ -138,7 +138,7 @@
 	<script type="text/javascript">
 		
 	$(function() {
-		if (bluetoothDevice.gatt.connected) {
+		if (connected) {
 			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
 		} else {
 			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
