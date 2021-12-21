@@ -36,7 +36,7 @@ ul.topnav li a:hover {background-color: red;}
 
 ul.sub-nav {
   padding-left: 0px;
-  background-color: #3D99CE;
+  background-color: white;
   text-align: center;
 }
 ul.sub-nav > li {
@@ -47,6 +47,6 @@ ul.sub-nav > li:hover {
   background-color: red;
 }
 ul.sub-nav> li > a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
