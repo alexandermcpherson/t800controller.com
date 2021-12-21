@@ -33,3 +33,20 @@ ul.topnav li a:hover {background-color: red;}
   ul.topnav li.right, 
   ul.topnav li {float: none;}
 }
+
+ul.sub-nav {
+  padding-left: 0px;
+  background-color: #3D99CE;
+  text-align: center;
+}
+ul.sub-nav > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+ul.sub-nav > li:hover {
+  background-color: red;
+}
+ul.sub-nav> li > a {
+  color: white;
+  text-decoration: none;
+}
