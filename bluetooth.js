@@ -8,6 +8,15 @@ var ledCommand;
 var soundCommand;
 var myCharateristic;
 var bluetoothDevice;
+var connected = false;
+
+$(function() {
+		if (connected) {
+			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
+		} else {
+			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
+		}
+});
 
 document.getElementById("discoverBluetoothBtn").addEventListener('click', function() {
 	bluetoothDevice = null;
@@ -22,6 +31,7 @@ document.getElementById("discoverBluetoothBtn").addEventListener('click', functi
     	console.log('> Requested ' + device.name + ' (' + device.id + ')');
 	    bluetoothDevice.addEventListener('gattserverdisconnected', onDisconnected);
 	    // Attempts to connect to remote GATT Server.
+	    connected = true;
 			return device.gatt.connect();
   	})
   	.then(server => {
@@ -40,7 +50,6 @@ document.getElementById("discoverBluetoothBtn").addEventListener('click', functi
 });
 
 // BLUETOOTH CONNECTIONS
-
 document.getElementById("diconnectBluetoothBtn").addEventListener('click', function() {
 	disconnect();
 });
@@ -63,6 +72,7 @@ function disconnect() {
   }
   console.log('Disconnecting from Bluetooth Device...');
   if (bluetoothDevice.gatt.connected) {
+  	connected = false;
     bluetoothDevice.gatt.disconnect();
   } else {
     console.log('> Bluetooth Device is already disconnected');
