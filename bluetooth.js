@@ -57,7 +57,7 @@ document.getElementById("reconnectBluetoothBtn").addEventListener('click', funct
 
 function setState() {
 	if (connected) {
-			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
+			$("#inputs").find("input, button, submit, textarea, select, .d-pad").removeAttr("disabled");
 			$("#inputs").addClass("enable-inputs");
 			$("#discoverBluetoothBtn").attr('disabled', true);
 			$("#discoverBluetoothBtn").addClass("disable-inputs");
@@ -65,7 +65,7 @@ function setState() {
 			$("#disconnectBluetoothBtn").removeClass("disable-inputs");
 			$("#reconnectBluetoothBtn").attr('disabled', true);
 		} else {
-			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
+			$("#inputs").find("input, button, submit, textarea, select, .o-pad").attr("disabled", "disabled");
 			$("#inputs").removeClass("enable-inputs");
 			$("#inputs").addClass("disable-inputs");
 			$("#discoverBluetoothBtn").attr('disabled', false);
