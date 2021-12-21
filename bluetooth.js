@@ -14,10 +14,15 @@ $(function() {
 		if (connected) {
 			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
 			$("#inputs").addClass("enable-inputs");
+			$("#disconnectBluetoothBtn").attr('disabled' , false);
+			$("#reconnectBluetoothBtn").attr('disabled' , true;
+		}
 		} else {
 			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
 			$("#inputs").removeClass("enable-inputs");
 			$("#inputs").addClass("disable-inputs");
+			$("#disconnectBluetoothBtn").attr('disabled' , true);
+			$("#reconnectBluetoothBtn").attr('disabled' , false;
 		}
 });
 
@@ -53,7 +58,7 @@ document.getElementById("discoverBluetoothBtn").addEventListener('click', functi
 });
 
 // BLUETOOTH CONNECTIONS
-document.getElementById("diconnectBluetoothBtn").addEventListener('click', function() {
+document.getElementById("disconnectBluetoothBtn").addEventListener('click', function() {
 	disconnect();
 });
 
