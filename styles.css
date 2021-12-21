@@ -77,3 +77,11 @@ p {
   width: 100%;
   padding: 20px;
 }
+
+.disable-inputs {
+   opacity: 0.5;
+}
+
+.enable-inputs {
+   opacity: 1.0;
+}

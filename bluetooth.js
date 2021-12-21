@@ -13,8 +13,11 @@ var connected = false;
 $(function() {
 		if (connected) {
 			$("#inputs").find("input, button, submit, textarea, select").removeAttr("disabled");
+			$("#inputs").addClass("enable-inputs");
 		} else {
 			$("#inputs").find("input, button, submit, textarea, select").attr("disabled", "disabled");
+			$("#inputs").removeClass("enable-inputs");
+			$("#inputs").addClass("disable-inputs");
 		}
 });
 
