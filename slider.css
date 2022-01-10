@@ -1,0 +1,13 @@
+.slider-container {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.slider-label {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.slider {
+	width:  300px;
+}

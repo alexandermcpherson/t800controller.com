@@ -1,3 +1,8 @@
+const defaultVolumePosition = 22;
+const defaultHeadUpAndDownPosition = 0;
+const defaultHeadLeftAndRightPosition = 90;
+const defaultEyesLeftAndRightPosition = 90;
+
 $(function() {
     // LEDS
 
@@ -185,6 +190,95 @@ $(function() {
 
     $("#sendActionCommandBtn").click( function() {
         sendMovementCommand();
+    });
+
+    // MANUAL ACTIONS
+
+    // VOLUME
+    $("#volume-label").click(function() {
+        let volume = $("#volume-range").val(defaultVolumePosition);
+        $("#volume-label").text("Volume: " + volume.val());
+        // Send command 
+        var command = "V_" + volume.val() + "_C";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#volume-range").on('input', function() {
+        $("#volume-label").text("Volume: " + $(this).val());
+    });
+
+    $("#volume-range").on('change',function(){
+        // Send command 
+        var command = "V_" + $(this).val() + "_C";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    // HEAD UP AND DOWN
+
+    $("#headUpAndDown-label").click(function() {
+        let headUpAndDown = $("#headUpAndDown-range").val(defaultHeadUpAndDownPosition);
+        $("#headUpAndDown-label").text("Move Head Up & Down: " + headUpAndDown.val());
+        // Send command 
+        var command = "S_" + headUpAndDown.val() + "_N";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#headUpAndDown-range").on('input', function() {
+        $("#headUpAndDown-label").text("Move Head Up & Down: " + $(this).val());
+    });
+
+    $("#headUpAndDown-range").on('change',function(){
+        // Send command 
+        var command = "S_" + $(this).val() + "_N";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    // HEAD LEFT AND RIGHT
+
+    $("#headLeftAndRight-label").click(function() {
+        let headLeftAndRight = $("#headLeftAndRight-range").val(defaultHeadLeftAndRightPosition);
+        $("#headLeftAndRight-label").text("Move Head Left & Right: " + headLeftAndRight.val());
+        // Send command 
+        var command = "S_" + headLeftAndRight.val() + "_H";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#headLeftAndRight-range").on('input', function() {
+        $("#headLeftAndRight-label").text("Move Head Left & Right: " + $(this).val());
+    });
+
+    $("#headLeftAndRight-range").on('change',function(){
+        // Send command 
+        var command = "S_" + $(this).val() + "_H";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    // EYES LEFT AND RIGHT
+
+    $("#eyesLeftAndRight-label").click(function() {
+        let eyesLeftAndRight = $("#eyesLeftAndRight-range").val(defaultEyesLeftAndRightPosition);
+        $("#eyesLeftAndRight-label").text("Move Eyes Left & Right: " + eyesLeftAndRight.val());
+        // Send command 
+        var command = "S_" + eyesLeftAndRight.val() + "_E";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#eyesLeftAndRight-range").on('input', function() {
+        $("#eyesLeftAndRight-label").text("Move Eyes Left & Right: " + $(this).val());
+    });
+
+    $("#eyesLeftAndRight-range").on('change',function(){
+        // Send command 
+        var command = "S_" + $(this).val() + "_E";
+        logCommand(command);
+        sendActionCommand(command);
     });
 
 });

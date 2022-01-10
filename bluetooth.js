@@ -145,6 +145,13 @@ function sendMovementCommand() {
 	myCharateristic.writeValueWithoutResponse(commandToSend);
 }
 
+function sendActionCommand(command) {
+	logCommand(command);
+  const encoder = new TextEncoder('utf-8');
+  const commandToSend = encoder.encode(command);
+  myCharateristic.writeValueWithoutResponse(commandToSend);
+}
+
 function logCommand(command) {
 	console.log('Sending command: ' + command);
 }	

@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="nav.css">
 		<link rel="stylesheet" href="dpad.css">
+		<link rel="stylesheet" href="slider.css">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y27CS9BWJ"></script>
 		<script>
@@ -114,6 +115,7 @@
 			</div>
 			<div id="white-bg" class="section-padding">	
 				<h1 class="h-padding-bottom"><u>D-Pad & O-Pad</u></h1>
+				<h4>Used for posing only (use controls further down for manual actions)</h4>
 				<p>D-Pad: Head Up, Down, Left & Right<br>O-Pad: Eyes Left & Right<br>O-Pad: Jaw Up & Down</p>
 				<div class="set dark">
 				  <nav class="d-pad">
@@ -128,6 +130,26 @@
 				    <a class="down" id="o-down" href="#"></a>
 				    <a class="left" id="o-left" href="#"></a>  
 				  </nav>
+				</div>
+			</div>
+			<div id="gray-bg" class="section-padding">	
+				<h1 class="h-padding-bottom"><u>Manual Actions</u></h1>
+				<h4>Move slider to move from current position to desired position <br>(Tap each label to return to default position)</h4>
+				<div class="slider-container">
+					<label id="volume-label" class="slider-label" for="volume-range">Volume: 22</label>
+					<input type="range" min="0" max="40" value="22" id="volume-range" class="slider">
+				</div>
+				<div class="slider-container">
+					<label id="headUpAndDown-label" class="slider-label" for="headUpAndDown-range">Move Head Up & Down: 0</label>
+					<input type="range" min="0" max="70" value="0" id="headUpAndDown-range" class="slider">
+				</div>
+				<div class="slider-container">
+					<label id="headLeftAndRight-label"class="slider-label" for="headLeftAndRight-range">Move Head Left & Right: 90</label>
+					<input type="range" min="20" max="160" value="90" id="headLeftAndRight-range" class="slider">
+				</div>
+				<div class="slider-container">
+					<label id="eyesLeftAndRight-label" class="slider-label" for="eyesLeftAndRight-range">Move Eyes Left & Right: 90</label>
+					<input type="range" min="0" max="180" value="90" id="eyesLeftAndRight-range" class="slider">
 				</div>
 			</div>
 		</div>
