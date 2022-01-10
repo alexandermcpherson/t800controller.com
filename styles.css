@@ -85,3 +85,7 @@ p {
 .enable-inputs {
    opacity: 1.0;
 }
+
+.warning {
+  color:  red;
+}
