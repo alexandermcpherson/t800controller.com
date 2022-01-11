@@ -89,3 +89,15 @@ p {
 .warning {
   color:  red;
 }
+
+.status-outstanding{
+  color:  red;
+}
+
+.status-inprogress {
+  color:  blue;
+}
+
+.status-fixed {
+  color:  green;
+}
