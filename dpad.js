@@ -1,8 +1,8 @@
 const HEADYMIN = 0;
 const HEADYMAX = 70;
 
-const HEADXMIN = 20;
-const HEADXMAX = 160;
+const HEADXMIN = 35;
+const HEADXMAX = 145;
 
 const EYESMIN = 20;
 const EYESMAX = 160;
@@ -126,6 +126,5 @@ $(function() {
     const commandToSend = encoder.encode(command);
     myCharateristic.writeValueWithoutResponse(commandToSend);
   }
-
-
+  
 });
