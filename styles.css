@@ -9,7 +9,7 @@ body {
 
 #white-bg {background-color: white;}
 
-.section-padding {padding: 25px 0px 50px 0px;}
+.section-padding {padding: 25px 0px 0px 0px;}
 
 .button {
   border: none;
@@ -88,6 +88,7 @@ p {
 
 .warning {
   color:  red;
+  padding: 0px 10px 0px 10px;
 }
 
 .status-outstanding{
@@ -100,4 +101,31 @@ p {
 
 .status-fixed {
   color:  green;
+}
+
+.collapsible {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #555;
+}
+
+.tips {
+  padding: 25px 0px 25px 0px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.aTip {
+  padding: 0px 10px 0px 10px;
 }
