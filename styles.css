@@ -123,7 +123,8 @@ p {
   padding: 25px 0px 25px 0px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #555;
+  color: white;
 }
 
 .aTip {
