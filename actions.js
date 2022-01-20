@@ -2,6 +2,8 @@ const defaultVolumePosition = 22;
 const defaultHeadUpAndDownPosition = 0;
 const defaultHeadLeftAndRightPosition = 90;
 const defaultEyesLeftAndRightPosition = 90;
+const defaultBaseBlueLedPosition = 255;
+const defaultBaseRedLedPosition = 255;
 
 $(function() {
     // LEDS
@@ -211,6 +213,48 @@ $(function() {
     $("#volume-range").on('change',function(){
         // Send command 
         var command = "V_" + $(this).val() + "_C";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    // BLUE BASE LEDS
+    $("#base-blue-led-label").click(function() {
+        let baseBlueLed = $("#base-blue-led-range").val(defaultBaseBlueLedPosition);
+        $("#base-blue-led-label").text("Base Blue Leds Brightness: " + baseBlueLed.val());
+        // Send command 
+        var command = "B_" + baseBlueLed.val() + "_L";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#base-blue-led-range").on('input', function() {
+        $("#base-blue-led-label").text("Base Blue Leds Brightness: " + $(this).val());
+    });
+
+    $("#base-blue-led-range").on('change',function(){
+        // Send command 
+        var command = "B_" + $(this).val() + "_L";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    // RED BASE LEDS
+    $("#base-red-led-label").click(function() {
+        let baseRedLed = $("#base-red-led-range").val(defaultBaseRedLedPosition);
+        $("#base-red-led-label").text("Base Red Leds Brightness: " + baseRedLed.val());
+        // Send command 
+        var command = "R_" + baseRedLed.val() + "_L";
+        logCommand(command);
+        sendActionCommand(command);
+    });
+
+    $("#base-red-led-range").on('input', function() {
+        $("#base-red-led-label").text("Base Red Leds Brightness: " + $(this).val());
+    });
+
+    $("#base-red-led-range").on('change',function(){
+        // Send command 
+        var command = "R_" + $(this).val() + "_L";
         logCommand(command);
         sendActionCommand(command);
     });
